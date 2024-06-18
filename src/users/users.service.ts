@@ -28,7 +28,7 @@ export class UsersService {
     if (!user) {
       throw new NotFoundException('User not found');
     }
-    return this.users.find(user => user.id === id);
+    return user;
   }
 
   createUser(user: User): string {

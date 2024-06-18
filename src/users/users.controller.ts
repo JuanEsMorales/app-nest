@@ -7,9 +7,7 @@ export class UsersController {
   constructor(private usersService: UsersService) {}
   
   @Get()
-  getUsersWithLimit(@Query('limit') limit: any) {
-    console.log(limit);
-    
+  getUsersWithLimit(@Query('limit') limit: any) {    
     return this.usersService.getUsersWithLimit(limit);
   }
 
